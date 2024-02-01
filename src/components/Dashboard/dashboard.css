@@ -1,0 +1,262 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* .dashMain {
+  border: 1px solid red;
+} */
+
+.dashMain {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px); /* 100% of the viewport height */
+}
+
+.dashWrapper {
+  /* border: 1px solid green; */
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.dashContentFirst {
+  /* flex: 0.8; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+.firstContent {
+  /* padding: 1.75rem 1.75rem 2rem 1.75rem; */
+  padding: 1.75rem 0;
+}
+.firstContent h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%; /* 1.5rem */
+}
+
+.secondContent > p {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 160%;
+  padding-bottom: 0.75rem;
+}
+
+.tradeItemParent {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tradeItemParent > div {
+  background-color: #fff;
+  height: 100px;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  /* gap: 1rem; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconParent {
+  border-radius: 12px;
+  background-color: #0e212c;
+  box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.02);
+  padding: 11px;
+}
+
+.tradeItemParent > div > div > h4 {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 25.2px */
+}
+.tradeItemParent > div > div > p {
+  color: #6e6e6e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 12px */
+}
+
+.dashContentSecond {
+  flex: 1;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background-image: url("../../assets/dashboardBackground.png"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+}
+
+
+.dashChildFirst {
+  padding-left: 3rem; /* Add padding to the right for spacing */
+}
+
+.dashChildFirst > h2 {
+  color: #cefcff;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.dashChildFirst > h3 {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dashChild {
+  width: 70%;
+  align-self: flex-end; /* Align to the flex-end for bottom-right positioning */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-right: 0.5rem;
+}
+
+.dashChild > div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.dashChild > div > h4 {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 28px */
+}
+
+.dashChild > div > p {
+  color: #6e6e6e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+  margin-bottom: 12px;
+}
+
+/* ----------------- */
+.dashContentThird{
+  display: none;
+}
+.thirdDashChild {
+  width: 100%;
+  align-self: flex-end; /* Align to the flex-end for bottom-right positioning */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-right: 0.5rem;
+}
+
+.thirdDashChild > div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.thirdDashChild > div > h4 {
+  color: #000;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 28px */
+}
+
+.thirdDashChild > div > p {
+  color: #6e6e6e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+  margin-bottom: 12px;
+}
+/* ---------- responsive ------------- */
+
+@media (max-width: 500px) {
+  .tradeItemParent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .tradeItemParent > div {
+    padding: 12px;
+  }
+  .tradeItemParent > div > div > h4 {
+    font-size: 16px;
+  }
+  .tradeItemParent > div > div > p {
+    font-size: 12px;
+  }
+  .dashContentSecond {
+    flex-direction: column;
+    gap: 12rem; /* this gap is used for bottom gaping */
+  }
+  .dashChildFirst {
+    padding-left: 1rem; 
+  }
+  .dashChildFirst > h2 {
+    font-size: 32px;
+  }
+  .dashChildFirst > h3 {
+    margin-top: 11px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.60);
+  }
+  .dashChild {
+    visibility: hidden; 
+  }
+  /* .dashChild {
+    visibility: none;
+    width: 75%; 
+    align-self: flex-end; 
+    grid-template-columns: repeat(1, 1fr);
+    padding-right: 1rem;
+  }
+  .dashChild > div {
+    padding: 12px;
+  }
+  .dashChild > div > p {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .dashChild > div > h4 {
+    font-size: 16px;
+  } */
+  .dashContentThird{
+    display: block;
+  }
+  .dashContentThird div{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
