@@ -83,7 +83,7 @@ const Home = () => {
                     <div>
                         <div className="demo-logo-vertical">
                             <img src={broLogo} alt="broLogo" className='broLogoGif' />
-                            <p>BRO BOT</p>
+                            <p>BRO</p>
                             <img src={broEllipse} alt="broEllipse" />
                         </div>
                         <Menu
@@ -154,7 +154,7 @@ const Home = () => {
                 <Header className='broHeader'>
                         {mobile && <div className="demo-logo-horizontal">
                             <img src={broLogo} alt="broLogo" className='broLogoGif' />
-                            <p>BRO BOT</p>
+                            <p>BRO</p>
                         </div>}
                     <Button
                         className='broMenuCollapseButton'
